@@ -5,6 +5,7 @@ import 'package:project/components/play-button.dart';
 
 import '../components/notification-circular.dart';
 import '../components/profile-image.dart';
+import '../components/search-input.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -73,6 +74,37 @@ class Home extends StatelessWidget {
                 ),
                 Row(
                   children: [
+                    // Form(
+                    //     child: SizedBox(
+                    //   width: 100,
+                    //   child: TextFormField(
+                    //     keyboardType: TextInputType.emailAddress,
+                    //     textInputAction: TextInputAction.next,
+                    //     cursorColor: Colors.red,
+                    //     onSaved: (search) {},
+                    //     decoration: InputDecoration(
+                    //       hintText: "Search",
+                    //       prefixIcon: Padding(
+                    //         padding: const EdgeInsets.all(10),
+                    //         child: Icon(Icons.search),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ))
+                    // TextFormField(
+                    //   keyboardType: TextInputType.emailAddress,
+                    //   textInputAction: TextInputAction.next,
+                    //   cursorColor: Colors.red,
+                    //   onSaved: (search) {},
+                    //   decoration: InputDecoration(
+                    //     hintText: "Search",
+                    //     prefixIcon: Padding(
+                    //       padding: const EdgeInsets.all(10),
+                    //       child: Icon(Icons.search),
+                    //     ),
+                    //   ),
+                    // ),
+
                     Container(
                       width: width / 1.5,
                       height: 55,
@@ -81,23 +113,17 @@ class Home extends StatelessWidget {
                           borderRadius: BorderRadius.circular(100)),
                       child: Row(
                         children: [
-                          Icon(
-                            Icons.search,
-                            color: Color.fromRGBO(121, 121, 121, 1),
-                          ),
-                          // 
+                          SearchInput(width: width),
+                          // Icon(
+                          //   Icons.search,
+                          //   color: Color.fromRGBO(121, 121, 121, 1),
+                          // ),
+                          //
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
-
-                // TextField(
-                //   decoration: InputDecoration(
-                //     border: OutlineInputBorder(),
-                //     hintText: 'Search',
-                //   ),
-                // ),
               ],
             ),
           ),
