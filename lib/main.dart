@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/screens/home.dart';
 import 'package:project/screens/splash.dart';
 
 void main() {
@@ -20,8 +21,13 @@ class MyApp extends StatelessWidget {
               headline1: TextStyle(
                   fontFamily: 'Avenir', fontSize: 36, color: Colors.white),
               headline6: TextStyle(
-                  fontFamily: 'Avenir', fontSize: 14, color: Colors.white))),
-      home: Splash(),
+                  fontFamily: 'Avenir',
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromRGBO(164, 48, 255, 1)),
+              headline5: TextStyle(
+                  fontFamily: 'Avenir', fontSize: 16, color: Color.fromRGBO(121, 121, 121, 1)),)),
+      home: Home(),
     );
   }
 }
