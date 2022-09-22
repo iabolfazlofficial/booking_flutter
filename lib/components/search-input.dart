@@ -16,10 +16,10 @@ class SearchInput extends StatelessWidget {
       child: SizedBox(
         width: width / 1.8,
         child: TextFormField(
-          keyboardType: TextInputType.emailAddress,
+          keyboardType: TextInputType.text,
           textInputAction: TextInputAction.next,
           cursorColor: Color.fromRGBO(148, 48, 255, 1),
-          onSaved: (email) {},
+          onSaved: (searchvalue) {},
           decoration: InputDecoration(
             border: InputBorder.none,
             hintText: "Search",

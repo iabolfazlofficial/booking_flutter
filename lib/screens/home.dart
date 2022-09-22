@@ -18,113 +18,83 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          width: double.infinity,
+          height: height,
           color: Color.fromRGBO(248, 230, 253, 1),
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                //  Header Profile and Notification
-                Row(
-                  children: [
-                    ProfileImage(),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Good Morning",
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "Jess",
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                            SizedBox(
-                              width: 16,
-                            ),
-                            Image(image: AssetImage("assets/images/hand.png"))
-                          ],
-                        )
-                      ],
-                    ),
-                    Expanded(child: Container()),
-                    NotificationCircular()
-                  ],
-                ),
-                // Header Ttitle
-                Padding(
-                  padding: const EdgeInsets.only(top: 36),
-                  child: Container(
-                    width: width / 1.5,
-                    child: Text(
-                      "Plan your trip with us.",
-                      style: Theme.of(context).textTheme.headline2,
-                    ),
-                  ),
-                ),
-                // Search Input and Grid
-                SizedBox(
-                  height: 24,
-                ),
-                Row(
-                  children: [
-                    // Form(
-                    //     child: SizedBox(
-                    //   width: 100,
-                    //   child: TextFormField(
-                    //     keyboardType: TextInputType.emailAddress,
-                    //     textInputAction: TextInputAction.next,
-                    //     cursorColor: Colors.red,
-                    //     onSaved: (search) {},
-                    //     decoration: InputDecoration(
-                    //       hintText: "Search",
-                    //       prefixIcon: Padding(
-                    //         padding: const EdgeInsets.all(10),
-                    //         child: Icon(Icons.search),
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ))
-                    // TextFormField(
-                    //   keyboardType: TextInputType.emailAddress,
-                    //   textInputAction: TextInputAction.next,
-                    //   cursorColor: Colors.red,
-                    //   onSaved: (search) {},
-                    //   decoration: InputDecoration(
-                    //     hintText: "Search",
-                    //     prefixIcon: Padding(
-                    //       padding: const EdgeInsets.all(10),
-                    //       child: Icon(Icons.search),
-                    //     ),
-                    //   ),
-                    // ),
-
-                    Container(
-                      width: width / 1.5,
-                      height: 55,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(100)),
-                      child: Row(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //  Header Profile and Notification
+                  Row(
+                    children: [
+                      ProfileImage(),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SearchInput(width: width),
-                          // Icon(
-                          //   Icons.search,
-                          //   color: Color.fromRGBO(121, 121, 121, 1),
-                          // ),
-                          //
+                          Text(
+                            "Good Morning",
+                            style: Theme.of(context).textTheme.headline5,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "Jess",
+                                style: Theme.of(context).textTheme.headline6,
+                              ),
+                              SizedBox(
+                                width: 16,
+                              ),
+                              Image(image: AssetImage("assets/images/hand.png"))
+                            ],
+                          )
                         ],
                       ),
+                      Expanded(child: Container()),
+                      NotificationCircular()
+                    ],
+                  ),
+                  // Header Ttitle
+                  Padding(
+                    padding: const EdgeInsets.only(top: 36),
+                    child: Container(
+                      width: width / 1.5,
+                      child: Text(
+                        "Plan your trip with us.",
+                        style: Theme.of(context).textTheme.headline2,
+                      ),
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  // Search Input and Grid
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        width: width / 1.5,
+                        height: 55,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(255, 255, 255, 0.4),
+                            borderRadius: BorderRadius.circular(100)),
+                        child: Row(
+                          children: [
+                            SearchInput(width: width),
+                            
+                          ],
+                        ),
+                      ),
+                      
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
