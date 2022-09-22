@@ -3,6 +3,9 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:project/components/play-button.dart';
 
+import '../components/categories-item.dart';
+import '../components/dropdown-showitem.dart';
+import '../components/groupgrid-button.dart';
 import '../components/notification-circular.dart';
 import '../components/profile-image.dart';
 import '../components/search-input.dart';
@@ -14,6 +17,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+
 
     return Scaffold(
       body: SafeArea(
@@ -86,13 +90,45 @@ class Home extends StatelessWidget {
                         child: Row(
                           children: [
                             SearchInput(width: width),
-                            
                           ],
                         ),
                       ),
-                      
+                      Expanded(child: Container()),
+                      GroupGrid(),
                     ],
                   ),
+                  // Categories
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Categories",
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  // Categories Item
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Container(
+                      child: Row(children: [
+                        CategoriesItem(),
+                        CategoriesItem(),
+                        CategoriesItem(),
+                        CategoriesItem(),
+                        CategoriesItem(),
+                        CategoriesItem(),
+                        CategoriesItem(),
+                      ]),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  // Selected Item for show Booking Item with
+                  DropDownShowItems()
+                  
                 ],
               ),
             ),

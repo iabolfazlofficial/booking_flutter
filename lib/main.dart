@@ -21,12 +21,19 @@ class MyApp extends StatelessWidget {
             headline1: TextStyle(
                 fontFamily: 'Avenir', fontSize: 36, color: Colors.white),
             headline2: TextStyle(
-                fontFamily: 'Avenir', fontSize: 36, color: Color.fromARGB(255, 0, 0, 0)),
+                fontFamily: 'Avenir',
+                fontSize: 36,
+                color: Color.fromARGB(255, 0, 0, 0)),
             headline6: TextStyle(
                 fontFamily: 'Avenir',
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(164, 48, 255, 1)),
+            headline4: TextStyle(
+                fontFamily: 'Avenir',
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(0, 0, 0, 1)),
             headline5: TextStyle(
                 fontFamily: 'Avenir',
                 fontSize: 16,
