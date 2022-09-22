@@ -21,8 +21,10 @@ class Home extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              //  Header Profile and Notification
+                //  Header Profile and Notification
                 Row(
                   children: [
                     ProfileImage(),
@@ -54,9 +56,48 @@ class Home extends StatelessWidget {
                     NotificationCircular()
                   ],
                 ),
-              
-              // 
+                // Header Ttitle
+                Padding(
+                  padding: const EdgeInsets.only(top: 36),
+                  child: Container(
+                    width: width / 1.5,
+                    child: Text(
+                      "Plan your trip with us.",
+                      style: Theme.of(context).textTheme.headline2,
+                    ),
+                  ),
+                ),
+                // Search Input and Grid
+                SizedBox(
+                  height: 24,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: width / 1.5,
+                      height: 55,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100)),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.search,
+                            color: Color.fromRGBO(121, 121, 121, 1),
+                          ),
+                          // 
+                        ],
+                      ),
+                    )
+                  ],
+                ),
 
+                // TextField(
+                //   decoration: InputDecoration(
+                //     border: OutlineInputBorder(),
+                //     hintText: 'Search',
+                //   ),
+                // ),
               ],
             ),
           ),

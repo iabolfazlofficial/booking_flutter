@@ -18,15 +18,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
-              headline1: TextStyle(
-                  fontFamily: 'Avenir', fontSize: 36, color: Colors.white),
-              headline6: TextStyle(
-                  fontFamily: 'Avenir',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(164, 48, 255, 1)),
-              headline5: TextStyle(
-                  fontFamily: 'Avenir', fontSize: 16, color: Color.fromRGBO(121, 121, 121, 1)),)),
+            headline1: TextStyle(
+                fontFamily: 'Avenir', fontSize: 36, color: Colors.white),
+            headline2: TextStyle(
+                fontFamily: 'Avenir', fontSize: 36, color: Color.fromARGB(255, 0, 0, 0)),
+            headline6: TextStyle(
+                fontFamily: 'Avenir',
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(164, 48, 255, 1)),
+            headline5: TextStyle(
+                fontFamily: 'Avenir',
+                fontSize: 16,
+                color: Color.fromRGBO(121, 121, 121, 1)),
+          )),
       home: Home(),
     );
   }
