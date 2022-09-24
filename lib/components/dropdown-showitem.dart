@@ -28,7 +28,7 @@ class _DropDownShowItemsState extends State<DropDownShowItems> {
         underline: SizedBox(),
         elevation: 0,
         value: dropdownvalue,
-        icon: Icon(Icons.keyboard_arrow_down),
+        icon: Icon(Icons.keyboard_arrow_down, color: Color.fromRGBO(146, 48, 255, 1),),
         items: items.map((String items) {
           return DropdownMenuItem(
               value: items,

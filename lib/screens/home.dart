@@ -3,11 +3,13 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:project/components/play-button.dart';
 
+import '../components/Image_location_card.dart';
 import '../components/categories-item.dart';
 import '../components/dropdown-showitem.dart';
 import '../components/groupgrid-button.dart';
-import '../components/notification-circular.dart';
+import '../components/circular-bg-icon.dart';
 import '../components/profile-image.dart';
+import '../components/recomended-card.dart';
 import '../components/search-input.dart';
 
 class Home extends StatelessWidget {
@@ -17,7 +19,6 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-
 
     return Scaffold(
       body: SafeArea(
@@ -61,7 +62,7 @@ class Home extends StatelessWidget {
                         ],
                       ),
                       Expanded(child: Container()),
-                      NotificationCircular()
+                      CircularBGWhiteIcon(url: "assets/images/notification.png",)
                     ],
                   ),
                   // Header Ttitle
@@ -127,8 +128,61 @@ class Home extends StatelessWidget {
                     height: 24,
                   ),
                   // Selected Item for show Booking Item with
-                  DropDownShowItems()
-                  
+                  Container(
+                    child: Row(
+                      children: [
+                        DropDownShowItems(),
+                        Expanded(child: Container()),
+                        Text(
+                          "Explore",
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Card Image and Location
+                  SizedBox(
+                    height: 0,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            ImageAndLocationCard(),
+                            ImageAndLocationCard(),
+                            ImageAndLocationCard(),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  // Categories
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Recomended",
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Container(
+                      child: Row(
+                        children: [
+                          RecomendedCard(),
+                          RecomendedCard(),
+                          RecomendedCard(),
+                          RecomendedCard(),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),

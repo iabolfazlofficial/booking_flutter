@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/screens/detail.dart';
 import 'package:project/screens/home.dart';
 import 'package:project/screens/splash.dart';
 
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 16,
                 color: Color.fromRGBO(121, 121, 121, 1)),
           )),
-      home: Home(),
+      home: Detail(),
     );
   }
 }
