@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project/screens/home.dart';
 
 class ExploreButton extends StatelessWidget {
   const ExploreButton({
@@ -13,7 +13,14 @@ class ExploreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(PageRouteBuilder(
+          pageBuilder: (_, __, ___) => Home(),
+          transitionDuration: Duration(seconds: 2),
+          transitionsBuilder: (_, a, __, c) =>
+              FadeTransition(opacity: a, child: c),
+        ));
+      },
       child: Container(
         width: width / 3,
         decoration: BoxDecoration(
@@ -26,7 +33,7 @@ class ExploreButton extends StatelessWidget {
             children: [
               Text(
                 "Explore",
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headline3,
               ),
               SizedBox(
                 width: 16,

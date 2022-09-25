@@ -35,12 +35,17 @@ class MyApp extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(0, 0, 0, 1)),
+            headline3: TextStyle(
+                fontFamily: 'Avenir',
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(255, 255, 255, 1)),
             headline5: TextStyle(
                 fontFamily: 'Avenir',
                 fontSize: 16,
                 color: Color.fromRGBO(121, 121, 121, 1)),
           )),
-      home: Detail(),
+      home: Splash(),
     );
   }
 }
